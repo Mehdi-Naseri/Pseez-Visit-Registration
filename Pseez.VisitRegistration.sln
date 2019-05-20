@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pseez.VisitRegistration", "Pseez.VisitRegistration\Pseez.VisitRegistration.csproj", "{EC02D82D-1685-4D84-96FD-BC25AEE36F8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pseez.VisitRegistration.ViewModels", "Pseez.VisitRegistration.ViewModels\Pseez.VisitRegistration.ViewModels.csproj", "{07E6DCF3-52AA-4C72-924B-F06DD287B095}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pseez.VisitRegistration.DomainClasses", "Pseez.VisitRegistration.DomainClasses\Pseez.VisitRegistration.DomainClasses.csproj", "{C5DB04D6-FBCC-4AFE-9B45-EDD32437E064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pseez.VisitRegistration.Extentions", "Pseez.VisitRegistration.Extentions\Pseez.VisitRegistration.Extentions.csproj", "{DFAA2477-E78B-4AEA-B93A-6CC448C6C734}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pseez.VisitRegistration.DataAccessLayer", "Pseez.VisitRegistration.DataAccessLayer\Pseez.VisitRegistration.DataAccessLayer.csproj", "{334B2D90-5573-4A22-805D-39BC3AA8155A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pseez.VisitRegistration.ServiceLayer", "Pseez.VisitRegistration.ServiceLayer\Pseez.VisitRegistration.ServiceLayer.csproj", "{3222FDCF-1DE1-4215-B753-6BEDE94A093F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.ViewModels", "Identity.ViewModels\Identity.ViewModels.csproj", "{344D789B-8FEA-4D5B-BDB7-1F2870A6EC5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Models", "Identity.Models\Identity.Models.csproj", "{C09D7301-2CAF-4F2B-9B8E-6FE3DC680D9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.ServiceLayer", "Identity.ServiceLayer\Identity.ServiceLayer.csproj", "{A4CA9178-26E0-4510-99C2-A65CBCBE64CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pseez.VisitRegistration.CommonLibrary", "Pseez.VisitRegistration.CommonLibrary\Pseez.VisitRegistration.CommonLibrary.csproj", "{8E7ECDDB-2D0F-4949-96F4-E5D228D355DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC02D82D-1685-4D84-96FD-BC25AEE36F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC02D82D-1685-4D84-96FD-BC25AEE36F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC02D82D-1685-4D84-96FD-BC25AEE36F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC02D82D-1685-4D84-96FD-BC25AEE36F8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07E6DCF3-52AA-4C72-924B-F06DD287B095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E6DCF3-52AA-4C72-924B-F06DD287B095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E6DCF3-52AA-4C72-924B-F06DD287B095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E6DCF3-52AA-4C72-924B-F06DD287B095}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5DB04D6-FBCC-4AFE-9B45-EDD32437E064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5DB04D6-FBCC-4AFE-9B45-EDD32437E064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5DB04D6-FBCC-4AFE-9B45-EDD32437E064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5DB04D6-FBCC-4AFE-9B45-EDD32437E064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFAA2477-E78B-4AEA-B93A-6CC448C6C734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFAA2477-E78B-4AEA-B93A-6CC448C6C734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFAA2477-E78B-4AEA-B93A-6CC448C6C734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFAA2477-E78B-4AEA-B93A-6CC448C6C734}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334B2D90-5573-4A22-805D-39BC3AA8155A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334B2D90-5573-4A22-805D-39BC3AA8155A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334B2D90-5573-4A22-805D-39BC3AA8155A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334B2D90-5573-4A22-805D-39BC3AA8155A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3222FDCF-1DE1-4215-B753-6BEDE94A093F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3222FDCF-1DE1-4215-B753-6BEDE94A093F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3222FDCF-1DE1-4215-B753-6BEDE94A093F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3222FDCF-1DE1-4215-B753-6BEDE94A093F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{344D789B-8FEA-4D5B-BDB7-1F2870A6EC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{344D789B-8FEA-4D5B-BDB7-1F2870A6EC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{344D789B-8FEA-4D5B-BDB7-1F2870A6EC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{344D789B-8FEA-4D5B-BDB7-1F2870A6EC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C09D7301-2CAF-4F2B-9B8E-6FE3DC680D9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09D7301-2CAF-4F2B-9B8E-6FE3DC680D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09D7301-2CAF-4F2B-9B8E-6FE3DC680D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C09D7301-2CAF-4F2B-9B8E-6FE3DC680D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4CA9178-26E0-4510-99C2-A65CBCBE64CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4CA9178-26E0-4510-99C2-A65CBCBE64CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4CA9178-26E0-4510-99C2-A65CBCBE64CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4CA9178-26E0-4510-99C2-A65CBCBE64CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E7ECDDB-2D0F-4949-96F4-E5D228D355DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E7ECDDB-2D0F-4949-96F4-E5D228D355DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E7ECDDB-2D0F-4949-96F4-E5D228D355DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E7ECDDB-2D0F-4949-96F4-E5D228D355DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

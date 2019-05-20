@@ -1,0 +1,99 @@
+﻿@*@using Microsoft.AspNet.Identity.EntityFramework;
+    @model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityUserRole>*@
+
+@using Identity.ViewModels.ViewModels;
+@model IEnumerable<Identity.ViewModels.ViewModels.UserRoleViewModel>
+
+@{
+    ViewBag.Title = "Manage Roles";
+}
+
+<h2>Users in Roles</h2>
+
+<p>
+    @Html.ActionLink("Add user to role", "AddUserInRole", null, new { @class = "btn btn-primary", data_modal = "" })
+</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-bordered table-hover table-responsive table-striped">
+            <tr>
+                <th>
+                    Role
+                </th>
+                <th>
+                    User
+                </th>
+                <th style="width:110px"></th>
+            </tr>
+
+            @foreach (UserRoleViewModel IdentityUserRole1 in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => IdentityUserRole1.RoleName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => IdentityUserRole1.UserName)
+                    </td>
+                    <td>
+                        @Html.ActionLink(" ", "DeleteUserInRole", new { UserName = IdentityUserRole1.UserName, RoleName = IdentityUserRole1.RoleName }, new { @class = "btn btn-danger glyphicon glyphicon-trash", data_modal = "" })
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+@*--------------------------------------------
+    ---------------- Modal  ---------------------
+    --------------------------------------------*@
+
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script>
+        $(function () {
+            $.ajaxSetup({ cache: false });
+            $("a[data-modal]").on("click", function (e) {
+                $('#myModalContent').load(this.href, function () {
+                    $('#myModal').modal({
+                        keyboard: true
+                    }, 'show');
+                    bindForm(this);
+                });
+                return false;
+            });
+        });
+
+        function bindForm(dialog) {
+            $('form', dialog).submit(function () {
+                $('#progress').show();
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        if (result.success) {
+                            $('#myModal').modal('hide');
+                            $('#progress').hide();
+                            location.reload();
+                        } else {
+                            $('#progress').hide();
+                            $('#myModalContent').html(result);
+                            bindForm();
+                        }
+                    }
+                });
+                return false;
+            });
+        }
+    </script>
+}

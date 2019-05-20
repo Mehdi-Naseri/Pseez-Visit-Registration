@@ -1,0 +1,98 @@
+﻿@model IEnumerable<Identity.Models.Models.ApplicationUser>
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+
+<p>
+    @Html.ActionLink("New User", "CreateUser", null, new { @class = "btn btn-primary", data_modal = "" })
+</p>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-bordered table-hover table-responsive table-striped">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th style="width:110px"></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+
+                        @Html.ActionLink(" ", "EditUser", new { id = item.Id }, new { @class = "btn btn-info glyphicon glyphicon-edit", data_modal = "" })
+                        @Html.ActionLink(" ", "DeleteUser", new { id = item.Id }, new { @class = "btn btn-danger glyphicon glyphicon-trash", data_modal = "" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+@*--------------------------------------------
+    ---------------- Modal  ---------------------
+    --------------------------------------------*@
+
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+
+
+@section Styles{
+
+@section Scripts{
+
+    <script>
+        //نمایش مودال
+        function ShowModal(Address) {
+            $('#myModalContent').load(Address, function () {
+                $('#myModal').modal({
+                    keyboard: true
+                }, 'show');
+                bindForm(this);
+            });
+            return false;
+        };
+        function bindForm(dialog) {
+            $('form', dialog).submit(function () {
+                $('#progress').show();
+                $.ajax({
+                    url: this.action,
+                    type: this.method,
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        if (result.success) {
+                            $('#myModal').modal('hide');
+                            $('#progress').hide();
+                            location.reload();
+                        } else {
+                            $('#progress').hide();
+                            $('#myModalContent').html(result);
+                            bindForm();
+                        }
+                    }
+                });
+                return false;
+            });
+        };
+    </script>
+}
